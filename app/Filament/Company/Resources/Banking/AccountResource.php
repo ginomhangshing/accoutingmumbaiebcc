@@ -28,6 +28,8 @@ class AccountResource extends Resource
 
     protected static ?string $modelLabel = 'Account';
 
+    protected static ?string $pluralModelLabel  = 'Accounts';
+
     protected static ?string $navigationIcon = 'heroicon-o-credit-card';
 
     protected static ?string $navigationGroup = 'Banking';
@@ -37,6 +39,13 @@ class AccountResource extends Resource
         $modelLabel = static::$modelLabel;
 
         return translate($modelLabel);
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        $pluralModelLabel = static::$pluralModelLabel;
+
+        return translate($pluralModelLabel);
     }
 
     public static function getNavigationParentItem(): ?string

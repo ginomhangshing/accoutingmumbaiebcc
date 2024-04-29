@@ -19,6 +19,8 @@ class DepartmentResource extends Resource
 
     protected static ?string $modelLabel = 'Department';
 
+    protected static ?string $pluralModelLabel = 'Departments';
+
     protected static ?string $navigationIcon = 'heroicon-o-square-3-stack-3d';
 
     protected static ?string $navigationGroup = 'HR';
@@ -30,6 +32,13 @@ class DepartmentResource extends Resource
         $modelLabel = static::$modelLabel;
 
         return translate($modelLabel);
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        $pluralModelLabel = static::$pluralModelLabel;
+
+        return translate($pluralModelLabel);
     }
 
     public static function getNavigationParentItem(): ?string

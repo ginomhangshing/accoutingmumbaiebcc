@@ -25,6 +25,8 @@ class CategoryResource extends Resource
 
     protected static ?string $modelLabel = 'Category';
 
+    protected static ?string $pluralModelLabel  = 'Categories';
+
     protected static ?string $navigationIcon = 'heroicon-o-folder';
 
     protected static ?string $navigationGroup = 'Settings';
@@ -36,6 +38,13 @@ class CategoryResource extends Resource
         $modelLabel = static::$modelLabel;
 
         return translate($modelLabel);
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        $pluralModelLabel = static::$pluralModelLabel;
+
+        return translate($pluralModelLabel);
     }
 
     public static function getNavigationParentItem(): ?string

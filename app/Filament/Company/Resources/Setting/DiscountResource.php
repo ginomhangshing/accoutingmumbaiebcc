@@ -29,6 +29,8 @@ class DiscountResource extends Resource
 
     protected static ?string $modelLabel = 'Discount';
 
+    protected static ?string $pluralModelLabel  = 'Discounts';
+
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 
     protected static ?string $navigationGroup = 'Settings';
@@ -40,6 +42,13 @@ class DiscountResource extends Resource
         $modelLabel = static::$modelLabel;
 
         return translate($modelLabel);
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        $pluralModelLabel = static::$pluralModelLabel;
+
+        return translate($pluralModelLabel);
     }
 
     public static function getNavigationParentItem(): ?string

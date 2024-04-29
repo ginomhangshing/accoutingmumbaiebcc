@@ -26,6 +26,8 @@ class TaxResource extends Resource
 
     protected static ?string $modelLabel = 'Tax';
 
+    protected static ?string $pluralModelLabel  = 'Taxes';
+
     protected static ?string $navigationIcon = 'heroicon-o-receipt-percent';
 
     protected static ?string $navigationGroup = 'Settings';
@@ -37,6 +39,13 @@ class TaxResource extends Resource
         $modelLabel = static::$modelLabel;
 
         return translate($modelLabel);
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        $pluralModelLabel = static::$pluralModelLabel;
+
+        return translate($pluralModelLabel);
     }
 
     public static function getNavigationParentItem(): ?string

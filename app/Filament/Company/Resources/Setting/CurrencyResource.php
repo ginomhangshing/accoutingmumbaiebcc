@@ -30,6 +30,8 @@ class CurrencyResource extends Resource
 
     protected static ?string $modelLabel = 'Currency';
 
+    protected static ?string $pluralModelLabel = 'Currencies';
+
     protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
     protected static ?string $navigationGroup = 'Settings';
@@ -41,6 +43,13 @@ class CurrencyResource extends Resource
         $modelLabel = static::$modelLabel;
 
         return translate($modelLabel);
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        $pluralModelLabel = static::$pluralModelLabel;
+
+        return translate($pluralModelLabel);
     }
 
     public static function getNavigationParentItem(): ?string

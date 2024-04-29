@@ -229,5 +229,9 @@
     "Resources": "Resources",
     "Finance": "Finance",
     "Personalization": "Personalization",
-    "Company": "Company"
+    "Company": "Company",
+    "Discounts": "Discounts",
+    "Taxes": "Taxes",
+    "Accounts": "Accounts",
+    "Departments": "Departments"
 }
